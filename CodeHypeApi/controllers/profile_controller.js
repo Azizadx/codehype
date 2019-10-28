@@ -11,6 +11,7 @@ exports.findAll = (req, res) => {
            res.json(profiles);
         });
 };
+
 exports.validateOne = (req, res, next, id) => {
     profileDal.findOne({_id: id})
         .then(profile => {
